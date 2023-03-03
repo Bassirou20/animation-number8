@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(131, 244, 169);
+    width: 100vw;
+    height: 100vh;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: 5px solid red;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    font-size: 2em;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "HOVERABLE";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 295px;
+    color: black;
+    top: -100%;
+    font-size: 1em;
+    height: 140px;
+    border-radius: 50%;
+    background-color: rgb(251, 50, 9);
+    transition-duration: 1s;
+    transition-property: top border-radius;
+}
+
+.btn:hover::before{
+   border-radius: 0;
+   top:0;
+}
